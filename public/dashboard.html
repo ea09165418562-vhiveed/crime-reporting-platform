@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crime Reporting Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="navbar">
+
+    <h2>Ikot Abasi Crime Reporting Platform</h2>
+
+    <button onclick="window.location.href= '/Logout'" class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+<div class="dashboard-container">
+
+    <div class="welcome-card">
+
+        <h1>Welcome</h1>
+
+        <p>
+            Report suspicious activities and crimes within
+            Ikot Abasi Local Government Area.
+        </p>
+
+    </div>
+
+    <div class="report-card">
+
+        <h2>Submit Crime Report</h2>
+
+        <form id="reportForm">
+
+            <input
+            type="text"
+            id="title"
+            placeholder="Crime Title"
+            required>
+
+            <select id="category">
+
+                <option value="">
+                    Select Crime Category
+                </option>
+
+                <option>Theft</option>
+                <option>Robbery</option>
+                <option>Kidnapping</option>
+                <option>Cultism</option>
+                <option>Assault</option>
+                <option>Cyber Crime</option>
+                <option>Domestic Violence</option>
+                <option>Other</option>
+
+            </select>
+
+            <input
+            type="text"
+            id="location"
+            placeholder="Incident Location"
+            required>
+
+            <textarea
+            id="description"
+            placeholder="Describe the incident"
+            rows="6"
+            required>
+            </textarea>
+
+            <label class="checkbox">
+
+                <input
+                type="checkbox"
+                id="anonymous">
+
+                Submit Anonymously
+
+            </label>
+
+            <label>
+                Upload Evidence (Optional)
+            </label>
+
+            <input
+            type="file"
+            id="evidence">
+
+            <button type="submit">
+                Submit Report
+            </button>
+
+        </form>
+
+    </div>
+<!--
+    <div class="report-history">
+
+    <h2>Recent Reports</h2>
+
+    <div id="reportList"></div>
+
+</div> -->
+
+    <div class="emergency-card">
+
+        <h2>Emergency Contacts</h2>
+
+        <ul>
+
+            <li>Police Emergency: 112</li>
+
+            <li>Fire Service: 122</li>
+
+            <li>Ambulance: 199</li>
+
+            <li>Community Watch Office</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

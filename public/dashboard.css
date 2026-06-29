@@ -1,0 +1,222 @@
+/* =========================
+   DASHBOARD PAGE STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body {
+    background-image:
+        linear-gradient(
+            rgba(10, 15, 30, 0.45),
+            rgba(20, 30, 50, 0.55)
+        ),
+        url("./images/gt.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: white;
+}
+
+/* NAVIGATION BAR */
+
+.navbar{
+    background: rgba(10, 42, 67, 0.65);
+    backdrop-filter: blur(12px);
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.navbar h2{
+    font-size:22px;
+}
+
+.logout-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.logout-btn:hover{
+    background:#b52b39;
+    transform:scale(1.05);
+}
+
+/* MAIN CONTAINER */
+
+.dashboard-container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* GLASS CARDS */
+
+.welcome-card,
+.report-card,
+.emergency-card,
+.report-history{
+   /* background: rgba(255,255,255,0.10);*/
+   background: transparent;
+    backdrop-filter: blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:30px;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    
+}
+
+/* WELCOME CARD */
+
+.welcome-card h1{
+    color:#ffffff;
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+.welcome-card p{
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* REPORT FORM */
+
+.report-card h2,
+.report-history h2,
+.emergency-card h2{
+    color:#ffffff;
+    margin-bottom:20px;
+}
+
+.report-card form{
+    display:flex;
+    flex-direction:column;
+}
+
+/* TRANSPARENT INPUTS */
+
+.report-card input,
+.report-card textarea,
+.report-card select{
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:8px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    color:white;
+    outline:none;
+}
+
+/* Placeholder */
+
+.report-card input::placeholder,
+.report-card textarea::placeholder{
+    color: rgba(255,255,255,0.75);
+}
+
+/* Select options */
+
+.report-card select option{
+    background:#0A2A43;
+    color:white;
+}
+
+.report-card textarea{
+    resize:vertical;
+}
+
+/* File input */
+
+input[type="file"]{
+    background: rgba(255,255,255,0.05);
+    padding:10px;
+    color:white;
+}
+
+/* Submit button */
+
+.report-card button{
+    background:linear-gradient(90deg,#124F7A,#1d7fc1);
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.report-card button:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+
+/* CHECKBOX */
+
+.checkbox{
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+}
+
+/* REPORT HISTORY */
+
+#reportList div{
+    background: rgba(255,255,255,0.08);
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    border-left:4px solid #38bdf8;
+}
+
+/* EMERGENCY CARD */
+
+.emergency-card ul{
+    list-style:none;
+}
+
+.emergency-card li{
+    padding:12px;
+    margin-bottom:10px;
+    background: rgba(255,255,255,0.08);
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.emergency-card li:hover{
+    background: rgba(255,255,255,0.15);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .dashboard-container{
+        width:95%;
+    }
+
+}
