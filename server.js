@@ -10,7 +10,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-console.log("MONGO URI:", process.env.MONGO_URI);
+console.log("DB:", process.env.RENDER_MONGO_URI);
+
 mongoose.connect(process.env.RENDER_MONGO_URI)
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
