@@ -10,9 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-console.log("DB:", process.env.RENDER_MONGO_URI);
-
-mongoose.connect(process.env.RENDER_MONGO_URI)
+mongoose.connect("mongodb+srv://vhiveed:vhiveedtech1@cluster0.0kasqk9.mongodb.net/crimeDB?retryWrites=true&w=majority")
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
